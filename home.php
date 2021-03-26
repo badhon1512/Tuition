@@ -8,18 +8,34 @@
 </head>
 <body>
 
+  <?php
 
+      include('header.php');
+
+
+ ?>
   <div>
 
-  <h1>Welcome to home page</h1>
+
+
+  
 
 
 
-  <ul style="background-color: cyan; width:20%; float:left">
+  <ul class="homebutton" style="background-color: cyan; padding:10px; width:20%;  float:left">
 
  <li><a target="iframe_a" href="addproduct.php">Add Product</a></li>
   <br>
   <li><a target="iframe_a" href="showproductinfo.php">Product Info</a></li>
+  <br>
+
+  <li><a target="iframe_a" href="addupcomingproduct.php">Add Upcoming product</a></li>
+  <br>
+
+  <li><a target="iframe_a" href="upcomingproductinfo.php">Show Upcoming product</a></li>
+  <br>
+
+  <li><a target="iframe_a" href="medicalinfo.php">Medical Info</a></li>
   <br>
 
 
@@ -40,6 +56,25 @@
 
   
   </div>
+
+
+  <style>
+
+
+.homebutton li a{
+    
+    text-decoration: none;
+    margin-bottom:5px;
+    background-color: red;
+    padding: 5px;
+    margin: 10px;
+ }
+
+ .homebutton li a:hover{
+    background-color: rgb(250,10,100);
+ }
+
+  </style>
   
 </body>
 </html>
