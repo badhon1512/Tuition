@@ -6,7 +6,7 @@ session_start();
 <div style=" background-color: red;   height:80px">
 
 <ul class="button" >
-   <li style="float: left; margin:30px;">AgricultureHub</li>
+   <li style="float: left; "><img src="./165705284_1391399217860789_3212769307992041414_n.png" alt=""></li>
    <li  style="float: right; margin:30px;"><a href="login.php">Logout</a></li>
 
 
@@ -38,6 +38,12 @@ session_start();
 
  .button li a:hover{
     background-color: rgb(250,10,100);
+ }
+
+ img{
+
+    height: 60px;
+    
  }
 
  

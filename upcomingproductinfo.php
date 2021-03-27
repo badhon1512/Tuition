@@ -6,79 +6,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
+<body style="">
+<div style="  margin-left:200px;">
 
-<div style="text-align: center; margin:0 auto">
+   <h2>Product Information</h2>
+<?php
+include "./DbController/db.php";
+  $connect=new db();
+  $conobj=$connect->OpenCon();
+  $sql="SELECT * FROM upcomingproducts";
+  $result=$connect->SelectQuery($conobj,$sql);
 
-<h1>Upcoming Product Information</h1>
-<br>
+  echo "<table border='1px'>";
 
+  echo "<tr>";
 
-<input type="text" placeholder="search">
+  echo "<th>Id</th>";
+  echo "<th>name</th>";
+  echo "<th>Description</th>";
 
-<br>
+  
+ 
 
-<br>
-
-<table style="margin:0 auto" border="1">
-
-<tr>
-
-<th>Id</th>
-<th>Name</th>
-<th>Description</th>
-
-<th>delete</th>
-<th>update</th>
-
-
-</tr>
+  echo "<th>update</th>";
+  echo "<th>delete</th>";
 
 
 
-
-
-<tr>
-
-<td>1</td>
-<td>Mangoo</td>
-<td>Pure mangoo from rajshahi</td>
+      
 
 
 
-</tr>
-
-<tr>
-
-<td>1</td>
-<td>Mangoo</td>
-<td>Pure mangoo from rajshahi</td>
-
-<td><a href="">Delete</a></td>
-<td><a href="">Update</a></td>
 
 
+  echo "</tr>";
 
-</tr>
-<tr>
-
-<td>1</td>
-<td>Mangoo</td>
-<td>Pure mangoo from rajshahi</td>
-
-<td><a href="">Delete</a></td>
-<td><a href="">Update</a></td>
-
-
-</tr>
-
+  if ($result->num_rows> 0) {
     
+    while($row = $result->fetch_assoc()) {
+      echo "<tr>";
+     
+
+      echo "<td >$row[id]</td>";
+      echo "<td >$row[name]</td>";
+      
+      echo "<td >$row[description]</td>";
+     
+
+      echo "<td >update</td>";
+
+      echo "<td >delete</td>";
+      
+      echo "<br>";
 
 
 
-</table>
 
-</div>
+
+  echo "</tr>";
+
+
+      
+
+    }
+
+    echo "</table>";
+    
+  } else {
+    echo "0 results";
+  }
+
+  $connect->CloseCon($conobj);
+  
+?>
+
   
  
 
