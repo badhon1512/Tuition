@@ -57,9 +57,10 @@ include "./DbController/db.php";
       
       echo "<td >$row[picture]</td>";
 
-      echo "<td >update</td>";
+      echo "<td><p><a href='./updateproductui.php?id=$row[id]'>update</a></p></td>";
+      echo "<td><p><a href='./delete.php?id=$row[id]'>delete</a></p></td>";
 
-      echo "<td >delete</td>";
+     
       
       echo "<br>";
 

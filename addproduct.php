@@ -64,7 +64,7 @@
     
 
     $sql="INSERT INTO  products
-  VALUES ('$id','$name','$description', '$quantity','$price','123')";
+  VALUES ($id,'$name','$description', '$quantity','$price','123')";
      
      
 
