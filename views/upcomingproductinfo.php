@@ -10,12 +10,19 @@
 <div style="  margin-left:200px;">
 
    <h2>Product Information</h2>
+   <button><a href="./upcomingproductinfo.php">Refresh</a></button>
+   <br><br>
+   <form action="" method="POST">
+    <input type="text" name='id'>
+    <button>Seacrh</button>
+   </form>
+
+   
 <?php
-include "./DbController/db.php";
-  $connect=new db();
-  $conobj=$connect->OpenCon();
-  $sql="SELECT * FROM upcomingproducts";
-  $result=$connect->SelectQuery($conobj,$sql);
+
+
+   include('../controllers/showupcomingproduct.php');
+
 
   echo "<table border='1px'>";
 
@@ -55,7 +62,7 @@ include "./DbController/db.php";
 
       echo "<td><p><a href='./updateupcomingproductui.php?id=$row[id]'>update</a></p></td>";
 
-      echo "<td><p><a href='./delete.php?uid=$row[id]'>delete</a></p></td>";
+      echo "<td><p><a href='../controllers/delete.php?uid=$row[id]'>delete</a></p></td>";
       
       echo "<br>";
 

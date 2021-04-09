@@ -11,7 +11,7 @@
 
    <h2>Medical Information</h2>
 <?php
-include "./DbController/db.php";
+include "../models/db.php";
   $connect=new db();
   $conobj=$connect->OpenCon();
   $sql="SELECT * FROM medicalinformation";

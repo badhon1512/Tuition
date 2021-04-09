@@ -3,7 +3,7 @@
 
 if(isset($_GET['id']))
 {
-  include './DbController/db.php';
+  include '../models/db.php';
  
  
   $sql="select * from upcomingproducts where id= $_GET[id]";
@@ -20,7 +20,7 @@ $result=$result->fetch_assoc();
 
 ?>
 
-<form action="updateproduct.php" method="post">
+<form action="../controllers/updateproduct.php" method="post">
 
 
 <input type="hidden" name="uid" value=<?php echo $result['id'];   ?>>

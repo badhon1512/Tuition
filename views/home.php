@@ -39,6 +39,10 @@
   <br>
 
 
+  <li><a target="iframe_a" href="contacttoadmin.php">Contact to admin</a></li>
+  <br>
+
+
 
   <li><a target="iframe_a" href="showprofile.php">Profile Info</a></li>
   <br>
