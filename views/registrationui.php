@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<?php
+     include('../controllers/registration.php');
+
+?>
+
 
 
       <div style="margin: 100px 400px;">
@@ -18,24 +23,29 @@
           <tr>
           <td><label for="">Id :</label></td>
           <td><input type="text" name="id"></td>
+          <td><?php echo $iderror;   ?></td>
           </tr>
 
 
           <tr>
           <td><label for="">Name :</label></td>
           <td><input type="text" name="name"></td>
+          <td><?php echo $nameerror;   ?></td>
           </tr>
 
 
           <tr>
           <td><label for="">Email :</label></td>
           <td><input type="text" name="email"></td>
+          <td><?php echo $emailerror;   ?></td>
           </tr>
 
 
           <tr>
           <td><label for="">Password :</label></td>
           <td><input type="password" name="password"></td>
+
+          <td><?php echo $passworderror;   ?></td>
           </tr>
 
 
@@ -48,12 +58,12 @@
 
           <td>User type</td>
 
-          <td><select name="" id="">
+          <td><select name="type" id="">
           
-          <option value="">admin</option>
-          <option value="">farmer</option>
-          <option value="">buyer</option>
-          <option value="">worker</option>
+          <option value="admin">admin</option>
+          <option value="farmer">farmer</option>
+          <option value="buyer">buyer</option>
+          <option value="worker">worker</option>
           </select></td>
           </tr>
 

@@ -11,16 +11,16 @@
 
 <div style="text-align: center;">
     
-    
+    <?php session_start(); ?>
     <h1>Profile Information</h1>
     <br>
     <br>
     <br>
 
-    <h4>Name : Abu Bakar Siddique</h4>
+    <h4>Name : <?php echo $_SESSION['name']; ?></h4>
 
-    <h4>Id : e-290</h4>
-    <h4>Address: Rampura Banasree</h4>
+    <h4>Id : <?php echo $_SESSION['id']; ?></h4>
+    <h4>Email: <?php echo $_SESSION['email']; ?></h4>
     
     
     </div>

@@ -1,10 +1,15 @@
+<?php
+  include('../controllers/LoginCheck.php');
 
+
+?>
 <div style="text-align: center; margin-top:200px">
-<form action="LoginCheck.php" method="POST">
+<form action="" method="POST">
 
-    <input type="text" name="username" placeholder="username"> <br> <br>
+    <input type="text" name="id" placeholder="username">
+     <br><?php  echo $iderror; ?> <br>
 
-    <input type="password" name="password" placeholder="password"> <br> <br>
+    <input type="password" name="password" placeholder="password">  <br> <?php  echo $passworderror; ?><br>
 
     <button type="submit">Login</button>
 
