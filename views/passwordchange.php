@@ -8,6 +8,13 @@
 </head>
 <body>
 
+
+<?php
+
+    include('../controllers/checkpasswordchange.php');
+
+?>
+
 <div style="text-align: center;">
     
     
@@ -16,15 +23,18 @@
     <br>
     <br>
 
-    <form action="">
+    <form action="" method="POST">
 
-    <input type="password" placeholder="Current Password"/>
+    <input type="password" name="password" placeholder="Current Password"/>
+
     <br>
+    <?php echo $passerror; ?>
     <br>
-    <input type="password" placeholder="New Password"/>
+    <input type="password" name="newpass" placeholder="New Password"/>
     <br>
+    <?php echo $newpasserror; ?>
     <br>
-    <input type="password" placeholder="Confirm password Password"/>
+    <input type="password" name="cnewpass" placeholder="Confirm password Password"/>
     <br>
     <br>
 
