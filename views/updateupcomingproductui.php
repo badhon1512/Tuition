@@ -1,5 +1,8 @@
 
 <?php
+include('header.php');
+include('leftmenu.php');
+
 
 if(isset($_GET['id']))
 {
@@ -20,7 +23,7 @@ $result=$result->fetch_assoc();
 
 ?>
 
-<form action="../controllers/updateproduct.php" method="post">
+<form style="margin-top:80px;" action="../controllers/updateproduct.php" method="post">
 
 
 <input type="hidden" name="uid" value=<?php echo $result['id'];   ?>>

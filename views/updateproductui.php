@@ -1,4 +1,10 @@
+<?php
 
+include('header.php');
+include('leftmenu.php');
+
+
+?>
 <?php
 
     if(isset($_GET['id']))
@@ -20,7 +26,7 @@
 
 ?>
 
-<form action="../controllers/updateproduct.php" method="post">
+<form style="margin-top:80px;"  action="../controllers/updateproduct.php" method="post">
    
 
 <input type="hidden" name="id" value=<?php echo $result['id'];   ?>>

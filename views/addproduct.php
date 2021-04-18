@@ -9,7 +9,16 @@
 <body>
 
    <?php
+
+include('header.php');
+include('leftmenu.php');
      include ('../controllers/addproduct.php');
+     
+
+     
+
+
+
 
 
      ?>
@@ -19,7 +28,7 @@
     
     <h1 >Add product</h1>
 
-    <form method="POST" action="">
+    <form method="POST" action="" enctype="multipart/form-data">
     
     <input   type="text" id="id" name="id" placeholder="Product Id"/>
     <br>
@@ -55,7 +64,11 @@
     <?php echo $quantityerror;  ?>
     <br>
 
+    
 
+    <input style="margin-left: 80px;" name="fileToUpload" type="file" placeholder="Picture">
+
+<br><br>
     <button type="submit">Add Product</button>
     <button type="reset">Reset</button>
 

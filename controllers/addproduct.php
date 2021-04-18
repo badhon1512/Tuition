@@ -4,10 +4,19 @@
      $id=$name=$description=$quantity=$price='';
      $valid=true;
 
+
      
 
      if($_SERVER["REQUEST_METHOD"]=="POST")
      {
+
+      $fname=basename($_FILES["fileToUpload"]["name"]);
+      //echo $fname;
+
+      $target_dir = "../assets/picture/";
+      $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+      //echo $target_file;
 
       $id=$_POST['id'];
      $name=$_POST['name'];
@@ -50,10 +59,10 @@
 
     include '../models/db.php';
      
-    
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
     $sql="INSERT INTO  products
-  VALUES ($id,'$name','$description', '$quantity','$price','123')";
+  VALUES ($id,'$name','$description', '$quantity','$price','$fname')";
      
      
 

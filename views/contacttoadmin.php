@@ -9,6 +9,9 @@
 <body>
 
 <?php
+
+include('header.php');
+include('leftmenu.php');
   include('../controllers/contact.php');
 
 

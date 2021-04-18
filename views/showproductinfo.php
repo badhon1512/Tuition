@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<?php
+
+include('header.php');
+include('leftmenu.php');
+
+
+?>
 <body style="">
 <div style="  margin-left:200px;">
 
@@ -59,7 +66,7 @@
       echo "<td>$row[quantity]</td>";
       echo "<td >$row[price]</td>";
       
-      echo "<td ><img src='./165705284_1391399217860789_3212769307992041414_n.png'alt=''></td>";
+      echo "<td ><img src='../assets/picture/$row[picture]'alt=''></td>";
 
       echo "<td><p><a href='./updateproductui.php?id=$row[id]'>update</a></p></td>";
       echo "<td><p><a href='../controllers/delete.php?id=$row[id]'>delete</a></p></td>";

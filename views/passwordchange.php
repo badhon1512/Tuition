@@ -10,6 +10,8 @@
 
 
 <?php
+ include('header.php');
+ include('leftmenu.php');
 
     include('../controllers/checkpasswordchange.php');
 

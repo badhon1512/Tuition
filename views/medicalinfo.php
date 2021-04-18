@@ -6,11 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body style="">
-<div style="  margin-left:200px;">
 
-   <h2>Medical Information</h2>
+
+<body style="">
+
 <?php
+   include('header.php');
+   include('leftmenu.php');
+
+
+?>
+<div >
+<h2>Medical Information</h2>
+   
+<?php
+
+
 include "../models/db.php";
   $connect=new db();
   $conobj=$connect->OpenCon();

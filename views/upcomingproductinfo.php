@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
+<?php
+
+include('header.php');
+include('leftmenu.php');
+
+
+?>
 <body style="">
 <div style="  margin-left:200px;">
 

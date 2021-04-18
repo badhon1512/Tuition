@@ -8,6 +8,8 @@
 </head>
 <body>
     <?php
+     include('header.php');
+     include('leftmenu.php');
 
     include('../controllers/addupcomingproduct.php');
 
@@ -18,11 +20,11 @@
     
     <h1 >Add Upcoming product</h1>
 
-    <form method="POST" action="">
+    <form onsubmit="return Validation()" method="POST" action="">
     
     <label for="">Product Id</label>
     <input style="margin-left:50px"   type="text" id="id" name="id" placeholder="Product Id"/>
-    <?php echo $iderror; ?>
+    <span id="iderror"></span>
     <br>
     <br>
 
@@ -31,17 +33,20 @@
     
 
     <input style="margin-left:30px"    type="text" id="name" name="name" placeholder="Product Name"/>
-    <?php echo $nameerror; ?>
+   <span id="nameerror"></span>
     <br>
     <br>
 
     <label for="">Product Description</label>
     <input   type="text" id="description" name="description" placeholder="Product Description"/>
+    <span id="descriptionerror"></span>
 
-    <?php echo $descriptionerror; ?>
+    
 
     <br>
     <br>
+
+    
     
 
 
@@ -59,6 +64,62 @@
 
       
     </style>
+
+
+    <script>
+
+
+
+    function Validation() { 
+
+      let valid=true;
+
+
+
+      if(document.getElementById('name').value=="")
+      {
+
+        document.getElementById('nameerror').textContent="please insert prodct name";
+        valid=false;
+       
+      }
+
+      if(document.getElementById('id').value=="")
+      {
+
+        document.getElementById('iderror').textContent="please insert prodct id";
+
+        valid=false;
+        
+      }
+
+
+      if(document.getElementById('description').value=="")
+      {
+
+        document.getElementById('descriptionerror').textContent="please insert prodct description";
+        valid=false;
+        
+      }
+
+      if(valid==false)
+      {
+        return false;
+      }
+      else{
+        return true;
+      }
+
+
+
+
+     }
+    
+    
+    
+    
+    
+    </script>
   
 </body>
 </html>

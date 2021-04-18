@@ -3,10 +3,10 @@
 session_start();
 
 ?>
-<div style=" background-color: red;   height:80px">
+<div style=" background-color: red;    height:80px">
 
 <ul class="button" >
-   <li style="float: left; "><img src="./165705284_1391399217860789_3212769307992041414_n.png" alt=""></li>
+   <li style="float: left; "><a href="./home.php"><img src="./165705284_1391399217860789_3212769307992041414_n.png" alt=""></a></li>
    <li  style="float: right; margin:30px;"><a href="loginui.php">Logout</a></li>
 
 
@@ -32,7 +32,7 @@ session_start();
 .button li a{
     padding:10px;
     text-decoration: none;
-    background-color: blue;
+    
     margin: 10px;
  }
 

@@ -7,11 +7,16 @@
   <title>Document</title>
 </head>
 <body>
+<?php
+    include('header.php');
+    include('leftmenu.php');
 
+
+?>
 
 <div style="text-align: center;">
     
-    <?php session_start(); ?>
+   
     <h1>Profile Information</h1>
     <br>
     <br>
