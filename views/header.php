@@ -7,7 +7,11 @@ session_start();
 
 <ul class="button" >
    <li style="float: left; "><a href="./home.php"><img src="./165705284_1391399217860789_3212769307992041414_n.png" alt=""></a></li>
+
+   
    <li  style="float: right; margin:30px;"><a href="loginui.php">Logout</a></li>
+
+   <li  style="float: right; margin:30px;"><a href="./registrationui.php">Registration</a></li>
 
 
    <li  style="float: right; margin:30px; margin-right:100px;">Login as <?php

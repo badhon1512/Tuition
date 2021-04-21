@@ -34,7 +34,7 @@
 
       if($valid==true)
       {
-        session_start();
+        //session_start();
 
           include('../models/db.php');
 

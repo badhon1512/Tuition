@@ -21,14 +21,14 @@ include('leftmenu.php');
    <button><a href="./showproductinfo.php">Refresh</a></button>
    <br><br>
 
-   <form action="" method="POST">
-    <input type="text" name='id'>
-    <button>Seacrh</button>
-   </form>
+   
+    <input type="text" id='productid'>
+    <button onclick="searchProduct()">Seacrh</button>
+  
 <?php
 
  include('../controllers/showproductinfo.php');
-  echo "<table border='1px'>";
+  echo "<table id='product' border='1px'>";
 
   echo "<tr>";
 
@@ -93,10 +93,37 @@ include('leftmenu.php');
   }
 
   $connect->CloseCon($conobj);
+
   
 ?>
 
+
+
+
+<script>
+
+
+function searchProduct(table) {
+  var id=document.getElementById("productid").value;
+ ///console.log(str);
+  if (id == "") {
+   
+    
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("product").innerHTML = this.responseText;
+      }
+    }
+    xmlhttp.open("GET","../controllers/Search.php?id="+id+"&tablename="+'products',true);
+    xmlhttp.send();
+  }
+}
   
+
+</script>
  
 
 </body>

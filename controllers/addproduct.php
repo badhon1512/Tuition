@@ -62,7 +62,7 @@
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
     $sql="INSERT INTO  products
-  VALUES ($id,'$name','$description', '$quantity','$price','$fname')";
+  VALUES ($id,'$name','$description', '$price','$quantity','$fname')";
      
      
 

@@ -71,7 +71,9 @@
 
           <td></td>
                <td><button type="submit">Register</button></td>
+               <td><a href="./loginui.php">LogIn</a></td>
           </tr>
+
          </table>
        
        </form>

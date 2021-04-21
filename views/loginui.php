@@ -17,6 +17,8 @@ session_destroy();
 
     <button type="submit">Login</button>
 
+    <a href="./registrationui.php">Registration</a>
+
 
 
 </form>
